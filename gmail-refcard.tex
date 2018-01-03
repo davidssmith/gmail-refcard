@@ -25,19 +25,32 @@
 \usepackage[margin=0.5in,landscape]{geometry}
 %\usepackage[draft]{flowfram}
 
+
 \usepackage{flowfram}
 \ffvadjustfalse
 \setlength{\columnsep}{1cm}
 \Ncolumn{3}
-\usepackage[T1]{fontenc}
-\usepackage{charter}
+%\usepackage[T1]{fontenc}
+%\usepackage{fontspec}
+
+% at the beginning, or somewhere in the middle of your document
+%\setmainfont{Georgia}
+%\setmainfont{Verdana}
 %\usepackage{cmbright}
 %\renewcommand\familydefault{\sfdefault}
-\usepackage{menukeys}
+
+\usepackage{charter}
+
 
 \setlength{\parindent}{0em}
 \newcommand{\sck}[1]{\textbf{\texttt{#1}}}
-\newcommand{\hdr}[1]{\vspace{1em}{\sffamily\bf \large #1}\vspace{0.5em}}
+%\makeatletter
+%\renewcommand\section{\@startsection{section}{1}{\z@}%
+%                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+%                                   {1ex \@plus.2ex}%
+%                                   {\centering\normalfont\sffamily\MakeUppercase}}% look at \contentsname
+%\makeatother
+
 
 \begin{document}
 
@@ -46,119 +59,26 @@
 \end{center}
 
 
-\hdr{Compose and Chat}
 
-\sck{p} \dotfill previous message in open conversation
+\section*{Navigation}
 
-\sck{n} \dotfill next message in open conversation
+\sck{p} \dotfill previous message
 
-\sck{\shift\ + esc} \dotfill focus main window
+\sck{n} \dotfill next message
 
-\sck{esc} \dotfill focus latest chat or compose
+\sck{j} \dotfill older conversation	
 
-\sck{ctrl + .} \dotfill advance to next chat or compose
+\sck{k} \dotfill new conversation	
 
-\sck{ctrl + ,} \dotfill advance to previous chat or compose
+\sck{o or Enter} \dotfill open conversation	
 
-\sck{\cmd\ + enter} \dotfill send
+\sck{u} \dotfill back to threadlist	
 
-\sck{\cmd\  + \shift\  + c} \dotfill add cc
+\sck{`} \dotfill go to next Inbox section	
 
-\sck{\cmd\  + \shift\  + b} \dotfill add bcc
-
-\sck{\cmd\ + \shift\  + f} \dotfill access custom from
-
-\sck{\cmd\  + k} \dotfill insert a link
-
-\sck{\cmd\ + ;} \dotfill go to next misspelled word (Mac only)
-
-\sck{\cmd\ + m} \dotfill open spelling suggestions
-
-\hdr{Formatting Text}
-
-\sck{\cmd\ +  \shift\  + 5} \dotfill previous font
-
-\sck{\cmd\  + \shift\  + 6} \dotfill next font
-
-\sck{\cmd\  + \shift\  + -} \dotfill decrease text size
-
-\sck{\cmd\  + \shift\  and +} \dotfill increase text size
-
-\sck{\cmd\  + b} \dotfill bold
-
-\sck{\cmd\ + i} \dotfill italics
-
-\sck{\cmd\ + u} \dotfill underline
-
-\sck{\cmd\  + \shift\  + 7} \dotfill numbered list
-
-\sck{\cmd\  + \shift\  + 8} \dotfill bulleted list
-
-\sck{\cmd\ + \shift\  + 9} \dotfill quote
-
-\sck{\cmd\ + [} \dotfill indent less
-
-\sck{\cmd\ + ]} \dotfill indent more
-
-\sck{\cmd\ + \shift\  + l} \dotfill align left
-
-\sck{\cmd\ + \shift\  + e} \dotfill align center
-
-\sck{\cmd\ + \shift\  + r} \dotfill align right
-
-\sck{\cmd\ + \textbackslash } \dotfill remove formatting
-
-\hdr{Actions}
+\sck{\textasciitilde} \dotfill go to previous Inbox section
 
 \sck{,} \dotfill move focus to toolbar
-
-\sck{x} \dotfill select conversation
-
-\sck{s} \dotfill toggle star/rotate among superstars
-
-\sck{e} \dotfill archive
-
-\sck{m} \dotfill mute conversation
-
-\sck{!} \dotfill report as spam
-
-\sck{\#} \dotfill delete
-
-\sck{r} \dotfill reply
-
-\sck{R} \dotfill reply in new window
-
-\sck{a} \dotfill reply all
-
-\sck{A} \dotfill reply all in new window
-
-\sck{f} \dotfill forward
-
-\sck{F} \dotfill forward in new window
-
-\sck{N} \dotfill update conversation
-
-\sck{]} or \sck{[} \dotfill archive conversation and go previous/next
-
-\sck{z} \dotfill undo last action
-
-\sck{I} \dotfill mark as read
-
-\sck{U} \dotfill mark as unread
-
-\sck{\_ } \dotfill mark unread from selected message
-
-\sck{+} or \sck{=} \dotfill mark as important
-
-\sck{-} \dotfill mark as not important
-
-\sck{;} \dotfill expand entire conversation
-
-\sck{:} \dotfill collapse entire conversation
-
-\sck{shift + t} \dotfill add conversation to Tasks
-
-\hdr{Jumping}
 
 \sck{g + i} \dotfill go to Inbox	
 
@@ -174,9 +94,138 @@
 
 \sck{g + k} \dotfill go to Tasks	
 
-\sck{g + l} \dotfill go to label	
+\sck{g + l} \dotfill go to label
 
-\hdr{Threadlist Selection}
+
+\section*{Actions}
+
+\sck{c} \dotfill compose	
+
+\sck{d} \dotfill compose in new tab	
+
+\sck{e} \dotfill archive
+
+\sck{\#} \dotfill delete
+
+\sck{!} \dotfill report as spam
+
+\sck{r} \dotfill reply
+
+\sck{R} \dotfill reply in new window
+
+\sck{a} \dotfill reply all
+
+\sck{A} \dotfill reply all in new window
+
+\sck{f} \dotfill forward
+
+\sck{F} \dotfill forward in new window
+
+\sck{/} \dotfill search mail	
+
+\sck{g} \dotfill search chat contacts	
+
+\sck{x} \dotfill select conversation
+
+\sck{s} \dotfill toggle star/rotate among superstars
+
+\sck{m} \dotfill mute conversation
+
+\sck{N} \dotfill update conversation
+
+\sck{]} or \sck{[} \dotfill archive and go prev/next
+
+\sck{z} \dotfill undo last action
+
+\sck{I} \dotfill mark as read
+
+\sck{U} \dotfill mark as unread
+
+\sck{\_ } \dotfill mark unread from selected
+
+\sck{+} or \sck{=} \dotfill mark as important
+
+\sck{-} \dotfill mark as not important
+
+\sck{;} \dotfill expand conversation
+
+\sck{:} \dotfill collapse conversation
+
+\sck{shift + t} \dotfill add conversation to Tasks
+
+\sck{.} \dotfill open ``more actions'' menu	
+
+\sck{v} \dotfill open ``move to'' menu	
+
+\sck{l} \dotfill open ``label as'' menu	
+
+\sck{?} \dotfill open keyboard shortcut help
+	
+
+
+\section*{Compose and Chat}
+
+\sck{cmd + enter} \dotfill send
+
+\sck{cmd  + shift  + c} \dotfill add cc
+
+\sck{cmd  + shift  + b} \dotfill add bcc
+
+\sck{shift + esc} \dotfill focus main window
+
+\sck{esc} \dotfill focus latest chat or compose
+
+\sck{ctrl + .} \dotfill advance to next chat or compose
+
+\sck{ctrl + ,} \dotfill advance to prev chat or compose
+
+\sck{cmd + shift  + f} \dotfill access custom from
+
+\sck{cmd  + k} \dotfill insert a link
+
+\sck{cmd + ;} \dotfill go to next misspelled word (Mac only)
+
+\sck{cmd + m} \dotfill open spelling suggestions
+
+
+\section*{Formatting Text}
+
+\sck{cmd  + b} \dotfill bold
+
+\sck{cmd + i} \dotfill italics
+
+\sck{cmd + u} \dotfill underline
+
+\sck{cmd + [} \dotfill indent less
+
+\sck{cmd + ]} \dotfill indent more
+
+\sck{cmd + \textbackslash } \dotfill remove formatting
+
+\sck{cmd  + shift  + +} \dotfill increase text size
+
+\sck{cmd  + shift  + -} \dotfill decrease text size
+
+\sck{cmd + shift  + l} \dotfill align left
+
+\sck{cmd + shift  + e} \dotfill align center
+
+\sck{cmd + shift  + r} \dotfill align right
+
+\sck{cmd +  shift  + 5} \dotfill previous font
+
+\sck{cmd  + shift  + 6} \dotfill next font
+
+\sck{cmd  + shift  + 7} \dotfill numbered list
+
+\sck{cmd  + shift  + 8} \dotfill bulleted list
+
+\sck{cmd + shift  + 9} \dotfill quote
+
+
+	
+
+\section*{Threadlist Selection}
 
 \sck{* + a} \dotfill select all	
 
@@ -190,39 +239,8 @@
 
 \sck{* + t} \dotfill select unstarred	
 
-\hdr{Navigation}
 
-\sck{u} \dotfill back to threadlist	
-
-\sck{k} \dotfill new conversation	
-
-\sck{j} \dotfill older conversation	
-
-\sck{o or Enter} \dotfill open conversation	
-
-\sck{`} \dotfill go to next Inbox section	
-
-\sck{\textasciitilde} \dotfill go to previous Inbox section	
-
-\hdr{Application}
-
-\sck{c} \dotfill compose	
-
-\sck{d} \dotfill compose in new tab	
-
-\sck{/} \dotfill search mail	
-
-\sck{g} \dotfill search chat contacts	
-
-\sck{.} \dotfill open "more actions" menu	
-
-\sck{v} \dotfill open "move to" menu	
-
-\sck{l} \dotfill open "label as" menu	
-
-\sck{?} \dotfill open keyboard shortcut help	
-
-\hdr{Hangouts}
+\section*{Hangouts}
 
 \sck{h + m} \dotfill  show menu	
 
@@ -234,16 +252,22 @@
 
 \sck{g + p} or \sck{h + p} \dotfill open phone	
 
+
+
 \vfill
 
+cmd $=$ ctrl on Linux and Windows
+
+\vspace{2em}
 
 
-\cmd\ $=$ \sck{ctrl} on Linux and Windows
-
-\shift\ $=$ shift \vspace{2em}
 
 
-{v1.0.0\break Copyright 2017 David S. Smith}
+{\footnotesize v1.0.0
+
+Copyright 2017 David S. Smith
+
+https://github.com/davidssmith/gmail-refcard}
 
 \end{document}
 
